@@ -9,7 +9,7 @@
     grid-template-areas:
     "header header header"
     "nav nav nav"
-    "section section section"
+    "main main main"
     "footer footer footer";
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto auto;
@@ -48,8 +48,8 @@
     color: white;
     background-color: #56423D;
 }
-#section{
-    grid-area: section;
+#main{
+    grid-area: main;
     width: 100%;
 }
 .background{
@@ -237,7 +237,7 @@ input[type=reset] {
             grid-template-areas: 
             "header"
             "nav"
-            "section"
+            "main"
             "footer";
         }
         .header__logo{

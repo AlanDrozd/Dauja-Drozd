@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* GENERALES */
+#grid {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "section section section"
+    "footer footer footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    height: 100vh;
+}
+#header{
+    grid-area: header;
+    background-color: #72766f;
+    padding: 5px 10px 0px 10px;
+    border-bottom: #56423D solid 3px;   
+}
+.header__logo{
+    width: 200px;
+}
+#nav{
+    grid-area: nav;
+    background-color: #ba0000;
+    border-bottom: #56423D solid 3px;
+}
+.nav_ul{
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+}
+.enlaces{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+.nav_ul a:hover{
+    color: white;
+    background-color: #56423D;
+}
+#section{
+    grid-area: section;
+    width: 100%;
+}
+.background{
+    background-image: url(../images/background.png);
+    background-size:auto;
+    background-attachment:fixed;
+}
+.article{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+    }
+#footer{
+    grid-area: footer;
+}
+.foot_style{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ba0000;
+    border-top: #56423D solid 3px;
+}
+.start{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 1rem;
+}
+.footer_linkRedes{
+    width:35px;
+    padding-left: 1rem;
+    padding-top: 0,5rem;
+}
+.foot_style p{
+    color: white;
+    margin-left: 1rem;
+    padding: 0,5rem;
+    font-size: 12px;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+.espaciado{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+/* INDEX */
+.article_iframe{
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.article_text{
+    color: black;
+    font-size: 15px;
+    padding: 10px;
+    line-height: 25px;
+}
+.article_img{
+    border: 1px inset gray;
+    width: 50%;
+    border-radius: 5px;
+}
+/* NOSOTROS */
+.img_nosotros{
+    width: 100%;
+    border-radius: 5px;
+}
+.p_nosotros{
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+}
+/* SERVICIOS */
+.article_img--Servicios{
+    width: 45%;
+    border-radius: 5px;
+}
+.article_servicios{
+    display: flex;
+    flex-direction: row;
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+}
+.ul_li_servicios{
+    list-style-type: square;
+    width: 45%;
+    word-wrap: normal;
+    font-size: 12px;
+}
+/* CLIENTES */
+.article_clientes{
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+    text-align: center;
+}
+.img_gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+}
+.img_gallery_item{
+    width: 100%;
+    object-fit: cover;
+}
+.img_gallery_img{
+    width: 100px;
+}
+/* CONTACTO */
+.article_contacto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    justify-content: space-evenly;
+    background: rgba(169, 169, 169, .5);
+    border-radius: 10px;
+}
+
+input[type=text], select, textarea {
+    width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;    
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+input[type=email]{
+    width: auto;
+    padding: 5px;
+    border: 1px solid #ccc;    
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+input[type=submit] {
+    background-color: #ba0000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input[type=reset] {
+    background-color: #ba0000;
+    color: white;
+    padding: 12px 20px;
+    margin-left: 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+/* GRACIAS */
+.article_gracias{
+    text-align: center;
+    width: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gracias_img{
+    display: flex;
+    display: block;
+    width: 100%;
+}
+/* MEDIA */
+@media only screen and (max-width:480px){
+        #Grilla{
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "section"
+            "footer";
+        }
+        .header__logo{
+            width: 100px;
+        }
+        #nav{
+            width: 100%;
+        }
+        .nav_ul{
+            display: flex;
+            list-style-type: none;
+            gap: 5px;
+            align-items: center;
+        }
+        .enlaces{
+            font-size: 3vw;
+        }
+        .espaciado{
+            margin: 0;
+            margin-bottom: 10px;
+            /* padding: 20px; */
+
+        }
+        .article{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .article_text{
+            font-size: 3vw;
+            word-wrap: normal;
+        }
+        .article_servicios{
+            display: flex;
+            flex-direction: column;
+        }
+        .article_img--Servicios{
+            width: 100%;
+        }
+        .ul_li_servicios{
+            list-style-type: square;
+            width: 100%;
+            word-wrap: normal;
+            font-size: 3vw;
+        }
+        .p_nosotros{
+            font-size: 4vw;
+        }
+        .article_clientes{
+            background: rgba(169, 169, 169, .5);
+            border-radius: 10px;
+            text-align: center;
+            font-size: 4vw;
+        }
+        .img_gallery{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 1rem;
+        }
+        .article_contacto{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }  
+        
+}
